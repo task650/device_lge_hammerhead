@@ -25,7 +25,6 @@ TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 msm_watchdog_v2.enable=1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
@@ -101,8 +100,6 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 BOARD_SEPOLICY_DIRS := \
        device/lge/hammerhead/sepolicy
 
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/hammerhead/mkbootimg.mk
-
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := underwear_hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
@@ -124,11 +121,9 @@ TARGET_TOUCHBOOST_FREQUENCY:= 1200
 RECOVERY_FSTAB_VERSION := 2
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+BOARD_RECOVERY_SWIPE := true
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-
-# Kernel handles input boosting
-TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
