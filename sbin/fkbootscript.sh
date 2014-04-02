@@ -8,9 +8,6 @@ mount -o rw,remount /system /system;
 [ -f /system/lib/hw/power.msm8974.so.bak ] || mv /system/lib/hw/power.msm8974.so /system/lib/hw/power.msm8974.so.bak
 [ -f /system/bin/thermal-engine-hh-bak ] || mv /system/bin/thermal-engine-hh /system/bin/thermal-engine-hh-bak
 
-chmod 755 /system/bin/qrngd
-chmod 755 /system/bin/qrngp
-
 if [ ! -e /system/etc/init.d ]; then
   mkdir /system/etc/init.d
   chown -R root.root /system/etc/init.d;
