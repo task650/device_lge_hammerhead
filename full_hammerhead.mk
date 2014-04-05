@@ -27,8 +27,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/hammerhead/CyanMessage.ogg:system/media/audio/notifications/CyanMessage.ogg \
     vendor/lge/hammerhead/apple_smsreceived.ogg:system/media/audio/notifications/apple_smsreceived.ogg \
     vendor/lge/hammerhead/IphoneCellSoundMerge.mp3:system/media/audio/ringtones/IphoneCellSoundMerge.mp3 \
-    vendor/aokp/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
-    vendor/lge/hammerhead/com.aokp.ota.apk:system/app/com.aokp.ota.apk
+    vendor/aokp/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk 
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
